@@ -75,10 +75,18 @@ function sendEmail() {
     return;
   }
 
-  const email = "wiryawanpratama360@gmail.com";
+  const adminEmail = "wiryawanpratama360@gmail.com";
 
-  const gmailLink =
-    `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+  const body = [
+    "Halo Explore Pangandaran,",
+    "",
+    message,
+    "",
+    "Terima kasih."
+  ].join("\n");
 
-  window.open(gmailLink, "_blank");
+  const mailtoLink =
+    `mailto:${adminEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  window.location.href = mailtoLink;
 }
