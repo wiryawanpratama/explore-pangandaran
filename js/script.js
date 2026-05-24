@@ -67,26 +67,11 @@ revealSection
 revealSection();
 
 function sendEmail() {
-  const subject = document.getElementById("emailSubject").value.trim();
-  const message = document.getElementById("emailMessage").value.trim();
+  const subject = document.getElementById("emailSubject").value;
+  const message = document.getElementById("emailMessage").value;
 
-  if (!subject || !message) {
-    alert("Subject dan pesan tidak boleh kosong!");
-    return;
-  }
+  const email = "wiryawanpratama360@gmail.com";
 
-  const adminEmail = "wiryawanpratama360@gmail.com";
-
-  const body = [
-    "Halo Explore Pangandaran,",
-    "",
-    message,
-    "",
-    "Terima kasih."
-  ].join("\n");
-
-  const mailtoLink =
-    `mailto:${adminEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-  window.location.href = mailtoLink;
+  window.location.href =
+    `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
 }
