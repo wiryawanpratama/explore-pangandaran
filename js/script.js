@@ -67,15 +67,18 @@ revealSection
 revealSection();
 
 function sendEmail() {
-  const subject =
-    document.getElementById("emailSubject").value;
+  const subject = document.getElementById("emailSubject").value.trim();
+  const message = document.getElementById("emailMessage").value.trim();
 
-  const message =
-    document.getElementById("emailMessage").value;
+  // VALIDASI KOSONG
+  if (!subject || !message) {
+    alert("Subject dan pesan tidak boleh kosong ya!");
+    return;
+  }
 
-  const email =
-    "wiryawanpratama360@gmail.com";
+  const email = "wiryawanpratama360@gmail.com";
 
-  window.location.href =
-    `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+
+  window.open(gmailLink, "_blank");
 }

@@ -769,3 +769,21 @@ body {
 .footer-message button:hover {
   transform: translateY(-4px);
 }
+
+.contact-icons {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.contact-icons a img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-icons a img:hover {
+  transform: scale(1.15);
+}
