@@ -67,11 +67,26 @@ revealSection
 revealSection();
 
 function sendEmail() {
-  const subject = document.getElementById("emailSubject").value;
-  const message = document.getElementById("emailMessage").value;
+  const subject = document.getElementById("emailSubject");
+  const message = document.getElementById("emailMessage");
+
+  // Ambil isi value
+  const subjectValue = subject.value.trim();
+  const messageValue = message.value.trim();
+
+  // Validasi kosong
+  if (!subjectValue || !messageValue) {
+    alert("Subject dan pesan tidak boleh kosong!");
+    return;
+  }
 
   const email = "wiryawanpratama360@gmail.com";
 
+  // Buka aplikasi email / Gmail
   window.location.href =
-    `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    `mailto:${email}?subject=${encodeURIComponent(subjectValue)}&body=${encodeURIComponent(messageValue)}`;
+
+  // Kosongkan form setelah dikirim
+  subject.value = "";
+  message.value = "";
 }
