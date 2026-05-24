@@ -70,15 +70,15 @@ function sendEmail() {
   const subject = document.getElementById("emailSubject").value.trim();
   const message = document.getElementById("emailMessage").value.trim();
 
-  // VALIDASI KOSONG
   if (!subject || !message) {
-    alert("Subject dan pesan tidak boleh kosong ya!");
+    alert("Subject dan pesan tidak boleh kosong!");
     return;
   }
 
   const email = "wiryawanpratama360@gmail.com";
 
-  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+  const mailtoLink =
+    `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
 
-  window.open(gmailLink, "_blank");
+  window.location.href = mailtoLink;
 }
