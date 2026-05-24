@@ -77,8 +77,8 @@ function sendEmail() {
 
   const email = "wiryawanpratama360@gmail.com";
 
-  const mailtoLink =
-    `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+  const gmailLink =
+    `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
 
-  window.location.href = mailtoLink;
+  window.open(gmailLink, "_blank");
 }
