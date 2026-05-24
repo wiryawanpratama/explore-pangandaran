@@ -66,3 +66,16 @@ revealSection
 
 revealSection();
 
+function sendEmail() {
+  const subject =
+    document.getElementById("emailSubject").value;
+
+  const message =
+    document.getElementById("emailMessage").value;
+
+  const email =
+    "wiryawanpratama360@gmail.com";
+
+  window.location.href =
+    `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+}

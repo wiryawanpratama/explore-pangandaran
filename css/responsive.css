@@ -1,123 +1,156 @@
 @media (max-width: 768px) {
 
-    .destination-card:last-child{
+  /* ================= NAV DESTINATION ================= */
+  .destination-card:last-child {
     width: 100%;
     grid-column: auto;
-}
-  .nav-menu{
+  }
+
+  /* ================= NAV MENU ================= */
+  .nav-menu {
     position: fixed;
     top: 90px;
     right: -100%;
-
     width: 260px;
 
-    background:
-    rgba(2,48,71,0.95);
-
+    background: rgba(2, 48, 71, 0.95);
     backdrop-filter: blur(14px);
 
     display: flex;
     flex-direction: column;
-
     gap: 24px;
-    padding: 30px;
 
+    padding: 30px;
     border-radius: 24px 0 0 24px;
 
     transition: 0.4s ease;
     z-index: 999;
   }
 
-  .nav-menu.active{
+  .nav-menu.active {
     right: 0;
   }
 
-  .hamburger{
+  .hamburger {
     display: block;
   }
 
-  .hero h1{
+  /* ================= HERO ================= */
+  .hero h1 {
     font-size: 42px;
   }
 
-  .hero p{
+  .hero p {
     font-size: 16px;
     padding: 0 20px;
   }
 
-  .hero-buttons{
+  .hero-buttons {
     flex-direction: column;
     align-items: center;
   }
 
-  .about{
+  /* ================= ABOUT ================= */
+  .about {
     margin-top: -80px;
     padding: 80px 6%;
   }
 
-  .about-container{
+  .about-container {
     grid-template-columns: 1fr;
   }
 
-  .about-text h2{
+  .about-text h2 {
     font-size: 36px;
   }
 
-  .stats{
+  .stats {
     flex-direction: column;
   }
 
-  .destination-grid{
+  /* ================= DESTINATION ================= */
+  .destination-grid {
     grid-template-columns: 1fr;
   }
 
-  .section-header h2{
+  .section-header h2 {
     font-size: 36px;
   }
 
-  .activities-grid{
+  /* ================= ACTIVITIES ================= */
+  .activities-grid {
     grid-template-columns: 1fr;
   }
 
-  .parallax-divider{
+  /* ================= PARALLAX ================= */
+  .parallax-divider {
     background-attachment: scroll;
   }
 
-  .divider-content h2{
+  .divider-content h2 {
     font-size: 38px;
   }
 
-  .gallery-grid{
+  /* ================= GALLERY ================= */
+  .gallery-grid {
     grid-template-columns: 1fr;
   }
 
-  .gallery-item.big{
+  .gallery-item.big {
     grid-row: auto;
   }
 
-  .gallery-item{
+  .gallery-item {
     height: 280px !important;
   }
 
-  .sunset-section{
+  /* ================= SUNSET ================= */
+  .sunset-section {
     background-attachment: scroll;
   }
 
-  .sunset-content h2{
+  .sunset-content h2 {
     font-size: 44px;
   }
 
-  .sunset-content p{
+  .sunset-content p {
     font-size: 16px;
   }
 
-  .footer-container{
-    grid-template-columns: 1fr;
+  /* ================= FOOTER FIX (INI KUNCINYA 🔥) ================= */
+  .footer-container {
+    display: flex;
+    flex-direction: column;
     gap: 40px;
   }
 
-  .footer-brand h2{
-    font-size: 28px;
+  /* bikin footer-left "melebur" biar order bisa kerja */
+  .footer-left {
+    display: contents;
   }
 
+  .footer-brand {
+    order: 1;
+  }
+
+  .footer-message {
+    order: 2;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin-top: 0;
+  }
+
+  .footer-links {
+    order: 3;
+  }
+
+  .footer-contact {
+    order: 4;
+  }
+
+  .footer-brand h2 {
+    font-size: 28px;
+  }
 }
